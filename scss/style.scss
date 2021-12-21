@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font-stack: 'Montserrat', sans-serif;
+$primary-color: #2D8BF5;
+
+// Reset
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Main Styling
+html,
+body {
+  font-family: $font-stack;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.8rem; }
+h4 { font-size: 1.5rem; }
+
+p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.7em;
+}
+
+a { text-decoration: none; }
+
+// Utility Classes
+.container {
+  margin: auto;
+  max-width: 1300px;
+  overflow: auto;
+  padding: 0 20px;
+}
+
+.large { font-size: 1.25rem; }
+
+.display-1 { 
+  font-size: 3.5rem; 
+}
+
+.btn {
+  display: inline-block;
+  font-size: 15px;
+  padding: 12px 40px;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 4px;
+}
+
+.btn-dark {
+  background: $primary-color;
+  border: none;
+  color: #FFF;
+}
+
+.btn-outline {
+  border: 1px solid $primary-color;
+  color: $primary-color;
+}
+
+/* Mainheader */
+#mainheader {
+  background: url('../img/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  color: #FFF;
+  /* Navbar */
+  #navbar {
+    overflow: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a {
+    color: #fff;
+    }  
+    .logo {
+      float: left;
+      padding-top: 5px;
+      font-size: 40px;
+      height: 100px;
+      font-weight: 200;
+    }
+    ul {
+      list-style: none;
+      float: right;
+      li {
+        float: left;
+        a {
+          display: block;
+          padding: 20px;
+          text-align: center;
+        } //End #navbar ul li a
+      } //End #navbar ul li
+    } //End #navbar ul
+  } //End #navbar
+  /* Showcase */
+  #showcase {
+    text-align: center;
+    padding-top: 350px;
+    h1 {
+      font-weight: 300;
+    }
+    a {
+      margin-top: 20px;
+    }
+  } // End #showcase
+} //End #mainheader
+
+/* More */
+#features {
+  padding: 80px 0;
+  h2 {
+    line-height: 1.2em;
+    font-weight: 200;
+    padding-bottom: 40px;
+  }
+  .features-row {
+    display: flex;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    &-content {
+      padding-right: 40px;
+      p {
+        padding-top: 10px;
+        padding-bottom: 15px;
+      }
+    } //End #features .features-row &-content
+  } //End #features .features-row
+} //End #features
+
+/* Footer */
+#mainfooter {
+  background: #000;
+  text-align: center;
+  padding:30px;
+}
+
+@import 'mobile';
